@@ -41,6 +41,7 @@ class Auth extends BaseController{
 
         return view('register');
     }
+
     public function login(){
         if($this->request->getPost())
         {
@@ -85,5 +86,9 @@ class Auth extends BaseController{
         }
         return view('login');
     }
-    public function logout(){}
+
+    public function logout(){
+        $this->session->destroy();
+        return redirect()->to('login');
+    }
 }

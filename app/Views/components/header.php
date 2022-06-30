@@ -17,7 +17,7 @@ $session = session();
                 </div>
                 <div class="ht-right">
                     <?php if($session->get('isLoggedIn')): ?>
-                    <a href="<?= site_url('logout') ?>" class="login-panel"><i class="fa fa-user"></i>Logout</a>
+                    <a href="<?= site_url('logout') ?>" class="login-panel"><i class="fa fa-user"></i>Logout (<?= $session->get('username') ?>)</a>
                     <?php else: ?>
                     <a href="<?= site_url('login') ?>" class="login-panel"><i class="fa fa-user"></i>Login</a>
                     <?php endif ?>

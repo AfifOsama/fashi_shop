@@ -40,7 +40,12 @@ $routes->get('login', 'Auth::login');
 $routes->add('login', 'Auth::login');
 $routes->get('register', 'Auth::register');
 $routes->add('register','Auth::register');
-$routes->get('logout','Auth:logout');
+$routes->get('logout','Auth::logout');
+$routes->get('shop','Shop::index');
+$routes->get('shop/category/(:segment)','Shop::category/$1');
+$routes->get('shop/product/(:segment)','Shop::prodcut/$1');
+$routes->get('shop/getcity','Shop::getcity');
+$routes->get('shop/getcost','Shop::getcost');
 
 /*
  * --------------------------------------------------------------------
